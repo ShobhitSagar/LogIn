@@ -12,11 +12,9 @@ public class register extends AppCompatActivity {
 
     Button lginbtn2;
     Button createacntbtn2;
-
     EditText usrname2;
     EditText pswrd2;
     EditText emailid2;
-
     String USRNAME2;
     String PSWRD2;
     String EMAIL2;
@@ -41,20 +39,17 @@ public class register extends AppCompatActivity {
                 EMAIL2 = emailid2.getText().toString();
 
                 Intent intent = new Intent(register.this, MainActivity.class);
-
                 intent.putExtra("UN", USRNAME2);
                 intent.putExtra("PW", PSWRD2);
                 startActivity(intent);
 
                 Toast.makeText(getBaseContext(), "Account Created!", Toast.LENGTH_SHORT).show();
-
             }
         });
 
         lginbtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(register.this, MainActivity.class);
                 startActivity(intent);
             }
