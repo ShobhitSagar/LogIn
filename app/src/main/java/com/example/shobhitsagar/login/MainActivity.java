@@ -38,12 +38,10 @@ public class MainActivity extends AppCompatActivity {
         loginbtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 USRNAME1 = ed_usrname1.getText().toString();
                 PSWRD1 = ed_password1.getText().toString();
 
                 if (USRNAME1.equals(Intent_String_USRNAME) && PSWRD1.equals(Intent_String_PSWRD)) {
-
                     final ProgressDialog dialog = ProgressDialog.show(MainActivity.this, "Please Wait", "Loading...", true);
                     new Thread(new Runnable() {
                         @Override
@@ -81,18 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Exit");
         builder.setMessage("Are you sure you want to exit?");
         builder.setCancelable(false);
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
         });
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 finish();
